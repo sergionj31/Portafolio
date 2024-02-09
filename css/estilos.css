@@ -1,0 +1,9 @@
+nav{
+    background-color: #1a1a1a;
+}
+
+.profilePic{
+    width: 104px;
+    height:104px;
+    border-radius: 50%;
+}
