@@ -1,9 +1,15 @@
 nav{
     background-color: #1a1a1a;
+    border-bottom: solid 1px #747C85;
 }
 
 .profilePic{
     width: 104px;
     height:104px;
     border-radius: 50%;
+}
+
+.header{
+    object-fit: cover; 
+    height: 108px;
 }
