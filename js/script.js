@@ -6,9 +6,9 @@ let typewriter = new Typewriter(app, {
 });
 
 typewriter
-    .pauseFor(2500)
+    .pauseFor(1000)
     .typeString('Front - End Developer')
-    .pauseFor(2500)
+    .pauseFor(1000)
     .deleteChars(100)
     .start();
 
