@@ -108,10 +108,35 @@
     transition: none; /* Sin transición para el color */
 }
 
+.meetup > div > p {
+    color: black;
+}
+
+.meetup > div > div > h4 {
+    color: black;
+}
+
 .meetup p {
-    color: white; /* Color fijo del texto */
     transition: none; /* Sin transición para el color */
-    font-weight: 300;
+}
+ 
+.estante {
+    display: flex;
+    flex-direction: row;
+}
+
+.status-ind {
+    width: 0.625em;
+    height: 0.625em;
+    margin: 0.375em 0;
+    border-radius: 0.5em;
+}  
+
+.pulsa {
+    width: 200px; 
+    height: 200px;
+    position: absolute;
+    left: 300px;
 }
 
 /* .switch:hover */.sun svg {

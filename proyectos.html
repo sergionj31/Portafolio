@@ -36,13 +36,17 @@
 
         <h1 class="title">Mis proyectos</h1>
 
+        <img class="pulsa" src="img/pulsaWhite.png"/>
+
         <section class="container mt-4">
             <div style="display: flex;">
                 <section class="col-md-4"> 
-                    <a style="text-decoration: none" href="http://sergionj31.pythonanywhere.com">
-                        <div class="meetup card shadow-sm rounded bg-secondary">
+                    <a style="text-decoration: none; font-size: large;" href="http://sergionj31.pythonanywhere.com">
+                        <div style="border-radius: 8px; background-color: white;" class="meetup card shadow-sm">
                             <div class="p-2">
-                                <h4>MeetUp</h4>
+                                <div class="estante">
+                                    <div class="status-ind bg-info" style="margin-top: 10px; margin-right: 10px;"></div><h4>MeetUp</h4>
+                                </div>
                                 <img class="rounded w-100" src="img/MeetUp.png"/>
                                 <p class="mt-3">Red social de eventos con transiciones en Paypal y uso de la API de Google Maps.</p>
                                 <p class="mt-3">Funciones de seguimiento, comentarios, búsqueda, historial de eventos, etc.</p>
@@ -50,11 +54,7 @@
                             </div>
                         </div>
                     </a>
-                </section>
-
-                <section class="col-md-4">
-                    <h4 class="mt-4"></h4>
-                </section>
+                </section> 
 
                 <section class="col-md-4">
                     <h4 class="mt-4"></h4>
@@ -69,6 +69,8 @@
         document.addEventListener('DOMContentLoaded', function () {
             const switchInput = document.querySelector('.switch input');
             const navbar = document.querySelector('.navbar');
+            const toggleImage = document.querySelector('.pulsa');
+            const cardsProjects = document.querySelector('.meetup');
 
             switchInput.addEventListener('change', function () {
                 document.body.classList.toggle('bg-dark');
@@ -77,6 +79,34 @@
                 // Cambiar el esquema de color del navbar
                 navbar.classList.toggle('navbar-light');
                 navbar.classList.toggle('navbar-dark');
+
+                // Cambiar la imagen
+                if (toggleImage.src.includes('pulsaWhite')) {
+                    toggleImage.src = 'img/pulsaBlack.png';
+                } else {
+                    toggleImage.src = 'img/pulsaWhite.png';
+                }
+
+                // Cambiar el bg-color de las cards
+                if (cardsProjects.style.backgroundColor === 'white') {
+                    cardsProjects.style.backgroundColor = 'black';
+                    cardsProjects.style.color = 'white';
+
+                    // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
+                    const texts = cardsProjects.querySelectorAll('p, h4'); // Asegúrate de seleccionar todos los elementos relevantes
+                    texts.forEach(text => {
+                        text.style.color = 'white'; // Cambiar color a blanco
+                    });
+                } else {
+                    cardsProjects.style.backgroundColor = 'white';
+                    cardsProjects.style.color = 'black';
+
+                    // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
+                    const texts = cardsProjects.querySelectorAll('p, h4');
+                    texts.forEach(text => {
+                        text.style.color = 'black'; // Cambiar color a negro
+                    });
+                }
             });
         });
     </script>
