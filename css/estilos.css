@@ -92,15 +92,32 @@
     height: 20px;
 }
 
+/* Card Meetup */
 .meetup {
+    position: relative; /* Posición relativa para controlar el z-index */
+    background-image: url('../img/fondoMeetUp.png');
+    background-size: 171%; /* Aumenta aún más el tamaño de la imagen */
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 0 5px gray; /* Sombra inicial */
-    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s, background-color 0.3s; /* Transiciones suaves */
     transform: scale(1); /* Escala inicial */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    height: 500px; /* Altura dependiente del contenido */
+    overflow: hidden; /* Asegura que la imagen no sobresalga */
 }
 
+/* Para asegurar que los elementos internos se ubiquen sobre el fondo */
+.meetup .p-2 {
+    position: relative; /* Posición relativa para asegurar que esté por encima */
+    z-index: 1; /* Z-index alto para que esté por encima de la imagen de fondo */
+}
+
+/* Hover para aumentar la escala */
 .meetup:hover {
-    box-shadow: 0 0 20px gray; /* Sombra al hacer hover */
-    transform: scale(1.05); /* Aumenta el tamaño */
+    transform: scale(1.05); /* Aumenta la escala ligeramente al pasar el ratón */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
 }
 
 .meetup h4 {

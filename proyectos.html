@@ -42,7 +42,7 @@
             <div style="display: flex;">
                 <section class="col-md-4"> 
                     <a style="text-decoration: none; font-size: large;" href="http://sergionj31.pythonanywhere.com">
-                        <div style="border-radius: 8px; background-color: white;" class="meetup card shadow-sm">
+                        <div style="border-radius: 8px;" class="meetup card shadow-sm">
                             <div class="p-2">
                                 <div class="estante">
                                     <div class="status-ind bg-info" style="margin-top: 10px; margin-right: 10px;"></div><h4>MeetUp</h4>
@@ -87,26 +87,26 @@
                     toggleImage.src = 'img/pulsaWhite.png';
                 }
 
-                // Cambiar el bg-color de las cards
-                if (cardsProjects.style.backgroundColor === 'white') {
-                    cardsProjects.style.backgroundColor = 'black';
-                    cardsProjects.style.color = 'white';
+                // // Cambiar el bg-color de las cards
+                // if (cardsProjects.style.backgroundColor === 'white') {
+                //     cardsProjects.style.backgroundColor = 'black';
+                //     cardsProjects.style.color = 'white';
 
-                    // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
-                    const texts = cardsProjects.querySelectorAll('p, h4'); // Asegúrate de seleccionar todos los elementos relevantes
-                    texts.forEach(text => {
-                        text.style.color = 'white'; // Cambiar color a blanco
-                    });
-                } else {
-                    cardsProjects.style.backgroundColor = 'white';
-                    cardsProjects.style.color = 'black';
+                //     // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
+                //     const texts = cardsProjects.querySelectorAll('p'); // Asegúrate de seleccionar todos los elementos relevantes
+                //     texts.forEach(text => {
+                //         text.style.color = 'white'; // Cambiar color a blanco
+                //     });
+                // } else {
+                //     cardsProjects.style.backgroundColor = 'white';
+                //     cardsProjects.style.color = 'black';
 
-                    // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
-                    const texts = cardsProjects.querySelectorAll('p, h4');
-                    texts.forEach(text => {
-                        text.style.color = 'black'; // Cambiar color a negro
-                    });
-                }
+                //     // Cambiar color de todos los textos dentro de .meetup (incluye p y h4)
+                //     const texts = cardsProjects.querySelectorAll('p');
+                //     texts.forEach(text => {
+                //         text.style.color = 'black'; // Cambiar color a negro
+                //     });
+                // }
             });
         });
     </script>
