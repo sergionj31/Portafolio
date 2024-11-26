@@ -160,6 +160,11 @@
     animation: rotate 15s linear infinite;
 }
 
+.dark-mode {
+    background-color: #0D6EFD !important;
+    color: white !important;
+}
+
 @keyframes rotate {
 
 0% {

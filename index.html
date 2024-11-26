@@ -10,7 +10,7 @@
 <body class="bg-dark text-light">
     <div class="container" style="max-width: 950px;">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand p-2" href="#">Home</a>
+            <a class="navbar-brand p-2" href="index.html">Home</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -74,25 +74,25 @@
                     <section class="col-md-4"> 
                         <h4 class="mt-4">Capacidades</h4>
                         <br>
-                        <div class="aptitud card bg-info p-1 mb-3">Buena comunicación</div>
-                        <div class="aptitud card bg-info p-1 mb-3">Resolución de problemas</div>
-                        <div class="aptitud card bg-info p-1 mb-3">Flexibilidad</div>
-                        <div class="aptitud card bg-info p-1 mb-3">Adaptabilidad</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Buena comunicación</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Resolución de problemas</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Flexibilidad</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Adaptabilidad</div>
                     </section>
 
                     <section class="col-md-4">
                         <h4 class="mt-4">Idiomas</h4>
                         <br>
-                        <p>Castellano | Nativo</p>
-                        <p>Inglés | Nivel medio B2</p>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Castellano | Nativo</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Inglés | Nivel medio B2</div>
                     </section>
 
                     <section class="col-md-4">
                         <h4 class="mt-4">Más información</h4>
                         <br>
-                        <p>Carnet de conducir B, AM y A1</p>
-                        <p>Vehículo propio</p>
-                        <p>Disponibilidad total</p>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Carnet de conducir B, AM y A1</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Vehículo propio</div>
+                        <div style="background-color: #0DCAF0;" class="aptitud card p-1 mb-3">Disponibilidad total</div>
                     </section>
                 </div>
             </section>
@@ -189,6 +189,7 @@
         document.addEventListener('DOMContentLoaded', function () {
             const switchInput = document.querySelector('.switch input');
             const navbar = document.querySelector('.navbar');
+            const aptitudes = document.querySelectorAll(".aptitud");
 
             switchInput.addEventListener('change', function () {
                 document.body.classList.toggle('bg-dark');
@@ -197,6 +198,10 @@
                 // Cambiar el esquema de color del navbar
                 navbar.classList.toggle('navbar-light');
                 navbar.classList.toggle('navbar-dark');
+
+                aptitudes.forEach(aptitud => {
+                    aptitud.classList.toggle('dark-mode'); // Cambia entre modo oscuro y normal
+                });
             });
         });
     </script>
