@@ -16,9 +16,9 @@
                 </filter>
             </defs>
             <g filter="url(#bbblurry-filter)">
-                <ellipse id="elipse1" rx="20" ry="20" fill="hsl(37, 99%, 67%)" opacity="0.9" cx="500" cy="420"/>
-                <ellipse id="elipse2" rx="20" ry="20" fill="hsl(316, 73%, 52%)" opacity="0.9" cx="540" cy="470"/>
-                <ellipse id="elipse3" rx="20" ry="20" fill="hsl(185, 100%, 57%)" opacity="0.9" cx="540" cy="430"/>
+                <ellipse id="elipse1" rx="20" ry="20" fill="hsl(37, 99%, 67%)" opacity="0.9" cx="530" cy="420"/>
+                <ellipse id="elipse2" rx="20" ry="20" fill="hsl(316, 73%, 52%)" opacity="0.9" cx="580" cy="480"/>
+                <ellipse id="elipse3" rx="20" ry="20" fill="hsl(185, 100%, 57%)" opacity="0.9" cx="580" cy="430"/>
             </g>
         </svg>
     </div>
@@ -26,7 +26,7 @@
     <div class="container" style="max-width: 950px;">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand p-2" href="index.html">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -51,7 +51,7 @@
             <h2 class="typewriter subtitle"></h2> 
         </div>
 
-        <div class="container mt-4" style="max-width: 800px; float: left;">
+        <div class="container mt-4" style="max-width: 1000px; float: left;">
             <div style="display: flex;">
                 <section class="col-md-6">
                     <section class="container">
@@ -232,8 +232,8 @@
                     <p>&copy; 2025 Sergio Navarro Jarana. Todos los derechos reservados.</p>
                 </div>
                 <div>
-                    <a href="https://www.linkedin.com/in/sergio-navarro-jarana-b16986297/?originalSubdomain=es" class="text-light mx-2">LinkedIn</a>
-                    <a href="https://github.com/sergionj31" class="text-light mx-2">GitHub</a>
+                    <a href="https://www.linkedin.com/in/sergio-navarro-jarana-b16986297/?originalSubdomain=es" class="linkedin text-light mx-2">LinkedIn</a>
+                    <a href="https://github.com/sergionj31" class="github text-light mx-2">GitHub</a>
                 </div>
             </footer>
         </div>
@@ -246,6 +246,9 @@
             const switchInput = document.querySelector('.switch input');
             const navbar = document.querySelector('.navbar');
             const aptitudes = document.querySelectorAll(".aptitud");
+            const technos = document.querySelectorAll(".techno");
+            const linkedin = document.querySelector('.linkedin');
+            const github = document.querySelector('.github');
 
             switchInput.addEventListener('change', function () {
                 document.body.classList.toggle('bg-dark');
@@ -258,6 +261,14 @@
                 aptitudes.forEach(aptitud => {
                     aptitud.classList.toggle('dark-mode'); // Cambia entre modo oscuro y normal
                 });
+
+                technos.forEach(techno => {
+                    techno.classList.toggle('dark-mode'); // Cambia entre modo oscuro y normal
+                });
+
+                linkedin.classList.toggle('dark-mode');
+                
+                github.classList.toggle('dark-mode');
             });
         });
     </script>
@@ -298,6 +309,7 @@
             });
         });
     </script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 </html>

@@ -26,6 +26,12 @@ svg {
     max-width: 1920px; /* No crecerá más allá de 500px */
 }
 
+@media (max-width: 767.98px) {
+    .svg {
+        display: none;
+    }
+}
+
 .profilePic {
     width: 64px;
     height: 64px;
@@ -56,7 +62,16 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;  /* Asegura que el texto esté centrado */
-    margin-left: 140px;
+}
+
+body.bg-dark .linkedin,
+body.bg-dark .github {
+    color: white !important; /* Color blanco en modo oscuro */
+}
+
+body:not(.bg-dark) .linkedin, .linkedin:hover,
+body:not(.bg-dark) .github, github:hover {
+    color: #212529 !important; /* Color negro en modo claro */
 }
 
 .switch {
@@ -117,7 +132,6 @@ footer {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease-in-out;
 }
-
 
 .slider {
     position: absolute;
@@ -191,6 +205,10 @@ footer {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
 }
 
+.meetup:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
 .meetup h4 {
     color: white; /* Color fijo del texto */
     transition: none; /* Sin transición para el color */
@@ -227,12 +245,17 @@ footer {
     left: 300px;
 }
 
+@media (max-width: 767.98px) {
+    .pulsa {
+        display: none;
+    }
+}
+
 /* .switch:hover */.sun svg {
     animation: rotate 15s linear infinite;
 }
 
 .dark-mode {
-    background-color: #0D6EFD !important;
     color: white !important;
 }
 
