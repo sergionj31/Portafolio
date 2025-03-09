@@ -73,15 +73,15 @@ footer {
     height: 0;
 }
 
-.aptitudes-container {
+.flex-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;  /* Asegura que el texto esté centrado */
+    text-align: center;
 }
 
-.aptitudes {
+.items {
     display: flex;
     flex-direction: column;
     align-items: center;
