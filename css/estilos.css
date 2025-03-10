@@ -3,9 +3,17 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-image: url('../img/blob_background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main {
+    background-color: #212529; /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
 }
 
 .svg-container {
@@ -242,7 +250,7 @@ body:not(.bg-dark) .github, github:hover {
     width: 200px; 
     height: 200px;
     position: absolute;
-    left: 300px;
+    left: 140px;
 }
 
 @media (max-width: 767.98px) {
